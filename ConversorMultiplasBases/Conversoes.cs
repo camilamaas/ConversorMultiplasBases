@@ -138,7 +138,10 @@ namespace ConversorMultiplasBases
             for (int i = 0; i < valorHexadecimal.Length; i++)
             {
                 valorLetra = encontrarValorLetra(valorHexadecimal.Substring(i, 1));
+                valorDecimal = valorDecimal + (valorLetra*Math.Pow(16,i));
+              
             }
+
             return valorDecimal + string.Empty;
         }
 
@@ -210,28 +213,21 @@ namespace ConversorMultiplasBases
             if (letra.Equals("A"))
             {
                 valor = 10;
-            }
-            else if (letra.Equals("B"))
+            }else if (letra.Equals("B"))
             {
                 valor = 11;
-            }
-            else if (letra.Equals("C"))
-            {
+            }else if (letra.Equals("C")){
                 valor = 12;
-            }
-            else if (letra.Equals("D"))
+            }else if (letra.Equals("D"))
             {
                 valor = 13;
-            }
-            else if (letra.Equals("E"))
+            }else if (letra.Equals("E"))
             {
                 valor = 14;
-            }
-            else if (letra.Equals("F"))
+            }else if (letra.Equals("F"))
             {
                 valor = 15;
-            }
-            else
+            }else
             {
                 valor = Convert.ToInt32(letra);
             }
